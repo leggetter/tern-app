@@ -1,0 +1,99 @@
+.App {
+  text-align: center;
+}
+
+.App-main {
+  background-color: #0f2833;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-tern-logos,
+.App-tern-letters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 30;
+  width: 600px;
+}
+
+.App-tern-letters {
+  margin: 30px 0;
+  font-weight: 600;
+}
+
+.App-tern-logos {
+  margin-bottom: 60px;
+}
+
+.App-tern-logo {
+  width: 100px;
+  height: 100px;
+}
+
+@media (max-width: 600px) {
+  .App-tern-logos,
+  .App-tern-letters {
+    width: 100%;
+  }
+
+  .App-tern-logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.App-tech-list {
+  text-align: left;
+}
+
+.App-link,
+.App-tech-list a {
+  color: #2ccea1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-tern-logos .App-tern-logo {
+    animation: spin infinite 20s linear;
+  }
+
+  .App-star {
+    animation: spin infinite 30s linear, fadeIn 2s;
+  }
+
+  .App-star.deleted {
+    animation: fadeOut 2s;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
